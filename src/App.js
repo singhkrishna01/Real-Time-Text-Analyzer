@@ -44,8 +44,8 @@ const App = () => {
 
   // Copy functionality for the highlighted text
   const handleCopy1 = () => {
-    const textarea = document.querySelector('.highlighted-text');
-    const text = textarea.innerText; // Use innerText to get the text content
+    const textarea = document.getElementsByClassName('highlighted-text');
+    const text = textarea.textContent ; // Use innerText to get the text content
     navigator.clipboard.writeText(text);
   };
 
@@ -73,7 +73,7 @@ const App = () => {
             {/* Button to copy original text */}
             <button onClick={handleCopy}>Copy</button>
           </div>
-          <div className="btn">
+          <div className="btn" style={{marginLeft: "1rem"}}>
             {/* Button to copy highlighted text */}
             <button onClick={handleCopy1}>Copy</button>
           </div>
