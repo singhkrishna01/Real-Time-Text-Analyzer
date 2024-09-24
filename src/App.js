@@ -102,7 +102,7 @@ const App = () => {
         </div>
       </div>
       <footer>
-        <p>Design and Developed by Krishna singh <span></span></p>
+        <p>Design and Developed by <a target='_blank' href='https://krishna-singh.netlify.app/' >Krishna singh</a> <span></span></p>
       </footer>
     </div>
   );
