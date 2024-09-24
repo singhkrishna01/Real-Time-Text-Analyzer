@@ -31,7 +31,7 @@ const App = () => {
 
     // Highlight the new replaced word
     const highlightRegex = new RegExp(`\\b${replaceString}\\b`, 'g');
-    const highlighted = newText.replace(highlightRegex, `<span class="highlight">${replaceString}</span>`);
+    const highlighted = newText.replace(highlightRegex, <span class="highlight">${replaceString}</span>);
     setHighlightedText(highlighted);
   };
 
@@ -44,8 +44,8 @@ const App = () => {
 
   // Copy functionality for the highlighted text
   const handleCopy1 = () => {
-    const textarea = document.getElementsByClassName('highlighted-text');
-    const text = textarea.textContent ; // Use innerText to get the text content
+    const textarea = document.querySelector('.highlighted-text');
+    const text = textarea.innerText; // Use innerText to get the text content
     navigator.clipboard.writeText(text);
   };
 
@@ -73,7 +73,7 @@ const App = () => {
             {/* Button to copy original text */}
             <button onClick={handleCopy}>Copy</button>
           </div>
-          <div className="btn" style={{marginLeft: "1rem"}}>
+          <div className="btn btn-2">
             {/* Button to copy highlighted text */}
             <button onClick={handleCopy1}>Copy</button>
           </div>
@@ -101,9 +101,11 @@ const App = () => {
           <button onClick={handleReplaceAll}>Replace All</button>
         </div>
       </div>
+      <footer>
+        <p>Design and Developed by Krishna singh <span></span></p>
+      </footer>
     </div>
   );
 };
 
 export default App;
- 
